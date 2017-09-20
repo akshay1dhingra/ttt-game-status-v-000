@@ -22,3 +22,7 @@ end
 def full?(board)
   board.all?{ |position| position == "X" || position == "O" }
 end
+
+def draw?(board)
+  board.full? && !board.won?
+end
